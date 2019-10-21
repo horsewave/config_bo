@@ -143,7 +143,11 @@ alias root='root -l'
 #alias to the work log;
 alias note='vi /home/mabo/2019-now-work-bo/work/working-note-log/small-note/note.tex'
 
-#alias to the data path file;
+#alias to the work log;
+alias cdnote='cd /home/mabo/2019-now-work-bo/work/working-note-log/'
+
+#alias to the texclear to clear the latex generated files
+alias texclear='/home/mabo/.vim/tools/texclear'
 
 #alias to the cd software/data;
 alias cddata='cd /home/mabo/software/data'
@@ -154,6 +158,8 @@ alias cdsrc='cd /home/mabo/software/src'
 #alias to the cd Ma;
 alias cdma='cd /localdata/Ma/software'
 
+#alias to the cd 2019-now-work-bo
+alias cdwork='cd /home/mabo/2019-now-work-bo'
 
 #alias to the du;
 alias du='du -h'

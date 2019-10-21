@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BAK_FILENAME	doxygen/template/main.h	18;"	d
+DATA_FILENAME	doxygen/template/main.h	16;"	d
+Doxyfile      	doxygen/template/Readme.tex	/^\\end{enumerate}$/;"	s
+FRI	doxygen/template/main.h	/^		FRI = 5, \/**< 星期五 *\/$/;"	e	enum:TDayOfWeek
+LOG_FILENAME	doxygen/template/main.h	14;"	d
+MON	doxygen/template/main.h	/^		MON = 1, \/**< 星期一 *\/$/;"	e	enum:TDayOfWeek
+PEnumDayOfWeek	doxygen/template/main.h	/^typedef TEnumDayOfWeek* PEnumDayOfWeek; $/;"	t
+SAT	doxygen/template/main.h	/^		SAT = 6  \/**< 星期六 *\/$/;"	e	enum:TDayOfWeek
+SUN	doxygen/template/main.h	/^		SUN = 0, \/**< 星期天 *\/$/;"	e	enum:TDayOfWeek
+SYS_FAULT	doxygen/template/main.h	29;"	d
+SYS_NORMAL	doxygen/template/main.h	27;"	d
+SYS_WARNNING	doxygen/template/main.h	31;"	d
+TDayOfWeek	doxygen/template/main.h	/^typedef enum TDayOfWeek$/;"	g
+TEnumDayOfWeek	doxygen/template/main.h	/^TEnumDayOfWeek;  $/;"	t	typeref:enum:TDayOfWeek
+THU	doxygen/template/main.h	/^		THU = 4, \/**< 星期四 *\/$/;"	e	enum:TDayOfWeek
+TUE	doxygen/template/main.h	/^		TUE = 2, \/**< 星期二 *\/$/;"	e	enum:TDayOfWeek
+WED	doxygen/template/main.h	/^		WED = 3, \/**< 星期三 *\/$/;"	e	enum:TDayOfWeek
+enum1	doxygen/template/main.h	/^TEnumDayOfWeek enum1;		$/;"	v
+p_enum2	doxygen/template/main.h	/^PEnumDayOfWeek p_enum2; $/;"	v

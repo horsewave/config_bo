@@ -1,0 +1,190 @@
+% ---------------
+% Description:write your Description
+% Editor:Bo Ma
+% date:2019/10/21
+% Email:mabo@ihep.ac.cn
+% Tel:010-88235869
+% Cell:15210606357
+%
+% Version:v1.0
+% ---------------
+%
+% \documentclass[a4paper]{article}
+
+%if have chinese,use ctexart
+\documentclass[a4paper]{ctexart}
+% make the section name on the left, the default is center
+\ctexset{section/format=\Large\bfseries}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+
+% % figure support
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\title{My title}
+\author{Bo Ma}
+
+\begin{document}
+
+\maketitle
+%\begin{abstract}
+%\end{abstract}
+\section{一般步骤}%
+\label{sec:gene-ste}
+\begin{enumerate}
+  \item 生成配置文件\colorbox{yellow}{ Doxyfile: doxygen (-s) -g}
+  \item \begin{verbatim}
+      建立目录结构, 比如Doxyfile文件 \doc文件夹(输出)\src文件夹(放代码) ->三者在同一目录下
+    \end{verbatim} 
+  \item 根据情况设置配置文件中的参数(关键)
+  \item 运行 {\colorbox {yellow} {doxygen Doxyfile}} 生成大概结构
+  \item 针对每个代码文件写doxygen注释
+  \item 继续运行 {\colorbox {yellow} {doxygen Doxyfile}}
+\end{enumerate}
+
+
+\section{配置文件Doxyfile设置}%
+\begin{verbatim}
+
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "Project Name"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "This is a brief descript."
+EXTRACT_ALL            = YES
+OUTPUT_DIRECTORY       = "./doc"
+OUTPUT_LANGUAGE        = Chinese
+FULL_PATH_NAMES        = NO
+WARN_LOGFILE           ="./doc/build.log"
+INPUT                  ="./src"
+FILE_PATTERNS          =
+SOURCE_BROWSER         = NO
+GENERATE_LATEX         = NO
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+UML_LOOK               = YES
+RECURSIVE              = YES
+ 
+\end{verbatim}
+
+
+\subsubsection{文件注释}%
+\label{ssub:wen_jian_zhu_shi_}
+
+\begin{verbatim}
+/**
+    * Copyright (c) 2017, All rights reserverd.
+    * 
+    * @file $file$
+    * @brief $brief$
+    * Details.
+    * 
+    * @author  $author$,$email$
+    * @date  $yy$-$mm$-$dd$
+    * @version   $maj$.$min$
+    *
+    *************************************************/
+
+\subsubsection{命名空间}%
+\label{ssub:ming_ming_kong_jian_}
+
+
+\begin{verbatim}
+    /**
+    * @brief $brief$
+    * Details.
+    **/
+
+\end{verbatim}
+   
+
+\subsubsection{结构体/枚举}%
+\label{ssub:jie_gou_ti_mei_ju_}
+
+
+\begin{verbatim}
+    /** 
+    * @brief $brief$
+    * Details.
+    **/
+
+\end{verbatim}
+   
+\subsubsection{类注释}%
+\label{ssub:lei_zhu_shi_}
+\begin{verbatim}
+
+    /**
+    * @brief $brief$
+    * Details.
+    **/
+
+\end{verbatim}
+   
+\subsubsection{函数注释}%
+\label{ssub:han_shu_zhu_shi_}
+
+
+   \begin{verbatim}
+    /** 
+    * @brief $brief$-$test$
+    * Details.
+    * @param $param1$ : $param1_detail$
+    * @param $param2$ : $param2_detail$
+    * @return $return_detail$
+    *        -<em>false</em> fail
+    *        -<em>true</em>  succeed
+    * @retval $return_note$
+    * @deprecated $deprecated$
+    * @see $see$
+    * @pre $pre$
+    **/
+
+   \end{verbatim}
+      
+\section{关键字收集}%
+\label{sec:guan_jian_zi_shou_ji_}
+
+\begin{itemize}
+  \item {\color{green}@author}  作者
+  \item {\color{green}@brief}  摘要
+  \item {\color{green}@version}  版本号
+  \item {\color{green}@date}  日期
+  \item {\color{green}@file}文件名，可以默认为空，DoxyGen会自己加
+  \item {\color{green}@class}  类名
+  \item {\color{green}@param         }函数参数
+  \item {\color{green}@return}  函数返回值描述
+  \item {\color{green}@exception}  函数抛异常描述
+  \item {\color{green}@warning}  函数使用中需要注意的地方
+  \item {\color{green}@remarks}备注
+  \item {\color{green}@see}  see also字段
+  \item {\color{green}@note}brief下空一行后的内容表示详细描述，但也可以不空行用note表示
+  \item {\color{green}@par}  开始一个段落，段落名称描述由你自己指定，比如可以写一段示例代码
+  \item {\color{green}@code}引用代码段
+  \item {\color{green}@endcode}  引用代码段结束
+  \item {\color{green}@pre}函数前置条件，比如对输入参数的要求
+  \item {\color{green}@post}  函数后置条件，比如对系统状态的影响或返回参数的结果预期
+  \item 
+  \
+  \item {\color{green}@}am[in|out]     参数名及其解释
+  \item {\color{green}@exception}  用来说明异常类及抛出条件
+  \item {\color{green}@return}对函数返回值做解释
+  \item {\color{green}@note}表示注解，暴露给源码阅读者的文档
+  \item {\color{green}@remark}  表示评论，暴露给客户程序员的文档
+  \item {\color{green}@since}  表示从那个版本起开始有了这个函数
+  \item {\color{green}@deprecated}  引起不推荐使用的警告
+  \item {\color{green}@see}  表示交叉参考
+ 
+\end{itemize}
+@author       作者
+
+
+\end{document}
+
+

@@ -122,7 +122,6 @@ alias o='xdg-open'
 #aliase to gvim
 alias vi='gvim'
 
-
 #aliase to gedit
 alias gg='gedit'
 
@@ -142,6 +141,10 @@ alias root='root -l'
 
 #alias to the work log;
 alias note='vi /home/mabo/2019-now-work-bo/work/working-note-log/small-note/note.tex'
+
+#alias to the my wikipedia;
+alias wiki='vscode /home/mabo/2019-now-work-bo/study_files/my_wikipedia_latex/my_wikipedia.tex'
+
 
 #alias to the work log;
 alias cdnote='cd /home/mabo/2019-now-work-bo/work/working-note-log/'

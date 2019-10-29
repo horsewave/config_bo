@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "f7",
+        "command": "latex-preview.showInPreview"
+    },
+    {
+        "key": "f7",
+        "command": "latex-preview.showPreview"
+    }
+]

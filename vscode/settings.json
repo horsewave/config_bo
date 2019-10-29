@@ -1,0 +1,247 @@
+{
+  //Editor begin{
+// Controls how lines should wrap.
+  //  - off: Lines will never wrap.
+  //  - on: Lines will wrap at the viewport width.
+  //  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
+  //  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
+  "editor.wordWrap": "bounded",
+
+  // show correct chinese charactor
+  "files.autoGuessEncoding": true,
+  //Editor end}
+
+
+  // vim settings begin{
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.autoindent": true,
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+      //keymapping for esc
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      //comment and uncomment line
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "after": [
+        "g",
+        "c",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.revert",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    },
+
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "0"
+      ]
+    },
+
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "after": [
+        "$"
+      ]
+    }
+
+
+  ],
+
+  "vim.leader": ";",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-b>": false
+  },
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+
+  // vim settings end}
+
+  // latex settings begin{
+    "latex-workshop.latex.recipes": [{
+      "name": "xelatex",
+      "tools": [
+          "xelatex"
+      ]
+    }, 
+    
+    {
+      "name": "latexmk",
+      "tools": [
+          "latexmk"
+      ]
+    },
+    {
+        "name": "xelatex->bibtex->exlatex*2",
+        "tools": [
+          "xelatex",
+          "bibtex",
+          "xelatex",
+          "xelatex"
+        ]
+      },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+          "pdflatex",
+          "bibtex",
+          "pdflatex",
+          "pdflatex"
+      ]
+    }
+    ],
+    "latex-workshop.latex.tools": [{
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "-pdf",
+      "%DOCFILE%"
+    ]
+    }, {
+    "name": "xelatex",
+    "command": "xelatex",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOCFILE%"
+    ]
+    }, {
+    "name": "pdflatex",
+    "command": "pdflatex",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOCFILE%"
+    ]
+    }, {
+    "name": "bibtex",
+    "command": "bibtex",
+    "args": [
+      "%DOCFILE%"
+    ]
+    }
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "workbench.colorTheme": "Solarized Dark",
+
+  // latex settings end }
+
+
+}

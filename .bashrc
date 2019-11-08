@@ -185,3 +185,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig 
 source /home/mabo/program_files/variablesGate_8.0_ma.sh
 source /home/mabo/program_files/variables_root.sh
+#for texlive
+export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
+# export INFOPATH /usr/local/texlive/2019/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux${PATH:+:${PATH}}
+

@@ -1,11 +1,54 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "f7",
-        "command": "latex-preview.showInPreview"
+        "key": "f5",
+        "command": "latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+b",
+        "command": "-latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+b",
+        "command": "-latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
     },
     {
         "key": "f7",
-        "command": "latex-preview.showPreview"
-    }
+        "command": "latex-workshop.tab"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "latex-workshop.recipes"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "latex-workshop.synctex",
+        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-latex-workshop.synctex",
+        "when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "shift+left",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "shift+right",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "shift+up",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "shift+down",
+        "command": "workbench.action.navigateDown"
+    },
+
+
 ]

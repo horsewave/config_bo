@@ -1,0 +1,68 @@
+%# -*- coding: utf-8-unix -*-
+%======================================================================
+% my weekly-report.tex for recording my work!
+%======================================================================
+% 双面打印
+\documentclass{qbook}
+\addbibresource{bib/qbook.bib}  % 导入参考文献数据库
+
+\usepackage{pdfpages}
+%\includepdf[pages=-]{figure/pdf-1-gu-phd-thesis-extracted.pdf}
+
+\usepackage{hyperref}
+% \section{Hello World}
+% \label{sec:hello}
+% \hyperref[sec:hello]{Word of text}
+
+\begin{document}
+\pagestyle{empty}
+\include{tex/cover}  % 载入封面
+\begin{center}
+	\Large{\sffamily\bfseries\heiti Bo Ma} \\ \vspace{2em}
+	\Large{\sffamily\bfseries\heiti 更新日期: \today} \\ \vspace{1em}
+	\Large{\sffamily\bfseries\heiti 电话: \texttt{88231380}} \\
+	\Large{\sffamily\bfseries\heiti 邮箱: \texttt{mabo@ihep.ac.cn}} \\
+	
+\end{center} 
+\vfill
+\vspace{30em}
+\begin{tabular*}{\textwidth}{ccc}
+	\includegraphics[width=0.3\textwidth]{figure/IHEP-LOGO.pdf}
+	& \begin{minipage}[b]{0.6\textwidth}
+		\small\sffamily
+		中国科学院高能物理研究所\\
+		 核技术应用研究中心\\
+		北京市射线成像技术与装备工程技术研究中心\\
+		Institute of High Energy Physics, 
+		Chinese Academyof Sciences, Beijing 100049, China  
+	\end{minipage}
+\end{tabular*}  
+\thispagestyle{empty}
+\frontmatter  % 对前言和概览用罗马数字作为页码
+\pagestyle{empty}
+\include{tex/preface}
+\pagestyle{empty}
+\tableofcontents
+\cleardoublepage
+\include{tex/overview} 
+\mainmatter	  % 对正文用阿拉伯数字作为页码
+%======================================================================
+% 正文内容
+\pagestyle{fancy}
+\setcounter{page}{0}
+
+% All personal defined new commands. 
+\include{tex/my-newcommand}
+%note can not put the surffix of the file".tex"
+\include{tex/content-your-content-1}
+
+
+\backmatter	
+%======================================================================
+% 打印参考文献
+\printbibliography[heading=bibintoc]
+\makeatletter
+\makeatother
+
+
+\end{document}
